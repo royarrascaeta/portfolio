@@ -1,0 +1,40 @@
+.footer {
+  background: $color-gradiente;
+  width: 100%;
+  grid-column: span 7;
+
+  &_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.6rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @include media-up(md) {
+      height: 4rem;
+      padding: 0 1.6rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .firma {
+      grid-column: 1/2;
+      font-size: 1.6rem;
+    }
+
+    .social {
+      grid-column: 3/4;
+
+      a {
+        font-size: 2.4rem;
+        color: $color-neutro;
+
+        i {
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+}

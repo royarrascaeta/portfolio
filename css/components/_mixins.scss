@@ -1,0 +1,16 @@
+$breakpoints: (
+  sm: 540px,
+  md: 768px,
+  lg: 992px,
+);
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 0px 5px 1px $color-principal;
+  box-shadow: 0px 0px 5px 1px $color-principal;
+}

@@ -1,0 +1,136 @@
+//Botones
+.btn-icon,
+.btn-icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0.2rem 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+
+  @include media-up(md) {
+    padding: 0.8rem 1.4rem;
+  }
+
+  i {
+    font-size: 2.4rem;
+    line-height: 1.4rem;
+  }
+}
+
+.btn-icon-alt {
+  @extend .btn-icon;
+  border: 0.2rem solid;
+  border-image-slice: 1;
+  border-image-source: $color-gradiente;
+  color: $color-principal;
+  filter: brightness(100%);
+  transition: box-shadow ease 0.3s, filter ease 0.3s;
+
+  &:hover {
+    @include box-shadow;
+    filter: brightness(200%);
+    transition: box-shadow ease 0.3s, filter ease 0.3s;
+  }
+}
+
+.btn-icon-text {
+  color: $color-neutro;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.6rem;
+  border: none;
+
+  & > * {
+    margin: 0.8rem;
+    margin-left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-gradiente;
+    z-index: -1;
+    filter: brightness(100%);
+    transition: filter ease-in 0.3s, box-shadow ease 0.3s;
+  }
+
+  &:hover:after {
+    @include box-shadow;
+    filter: brightness(150%);
+    transition: filter ease-in 0.3s, box-shadow ease 0.3s;
+  }
+}
+
+.btn-icon-text-alt {
+  @extend .btn-icon-text;
+  border: 0.2rem solid;
+  border-image-slice: 1;
+  border-image-source: $color-gradiente;
+  color: $color-principal;
+  filter: brightness(100%);
+  transition: filter ease 0.3s;
+
+  &:after {
+    background: transparent !important;
+  }
+
+  &:hover {
+    filter: brightness(200%) !important;
+    transition: filter ease 0.3s;
+  }
+}
+
+.btn-scroll-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  height: min-content !important;
+  visibility: hidden;
+
+  @include media-up(md) {
+    visibility: visible;
+  }
+
+  .btn-scroll {
+    display: flex;
+    flex-direction: column;
+    color: $color-neutro;
+    cursor: pointer;
+    text-align: center;
+    animation: moveUpDown 0.5s ease alternate infinite;
+
+    &:hover > * {
+      color: $color-neutro;
+      transition: color ease-in-out 0.3s;
+    }
+
+    & > * {
+      margin: 0;
+      padding: 0;
+      pointer-events: none;
+    }
+
+    span {
+      font-size: 1.6rem;
+    }
+
+    i {
+      font-size: 3.2rem;
+      line-height: 2rem;
+      -webkit-text-stroke: 0.1rem $color-neutro;
+      color: transparent;
+      transition: color ease-in-out 0.3s;
+    }
+  }
+}

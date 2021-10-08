@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce (Simulador)",
+    "video": "ecommerce-coder.webm",
+    "description": "- Proyecto final del curso de Javascript de Coderhouse. <br> Tienda virtual con temática de ropa de hombre, los productos están almacenados en una base de datos local (data/data.json). <br> - Posee filtrado de productos por categoría, y ordenamiento por precio (de menor a mayor y viceversa), También posee un buscador, el cual acepta palabras incluidas en el título, categoría, color o descripción del producto y botones de paginación dinámica. <br> - Funcionalidad de limitar la cantidad de productos que el cliente puede añadir en base al stock disponible (en el lado del cliente). <br> - Funcionalidad para añadir o eliminar productos del carrito. <br> - Funcionalidad para calcular envío en base al monto de la compra. <br> - Diseño responsive desarrollado con Sass y CSS puro, basado en grid.",
+    "github": "https://github.com/royarrascaeta/ecommerce-front",
+    "url": "https://roy-ecommerce.netlify.app/"
+  },
+  {
+    "id": 2,
+    "title": "Rockville Producciones",
+    "video": "rockville.webm",
+    "description": "Desarrollo de diseño y programación de sitio web para productora audiovisual 'Rockville' <br> - Cuenta con varias secciones: home, servicios, trabajos, nosotros y contacto. <br> - Diseño responsive mobile first. <br> - Contenido dinámico generado a traves de javascript (accediendo a base de datos MySQL). <br> - Carruseles de imagenes con efecto lightbox. <br> - Formularios de contacto. <br> - Lenguajes utilizados: HTML5, CSS3, JavaScript, PHP y MySQL. <br> - Se registró el dominio y contrató el servicio de hosting. <br> - Certificado SSL let's encrypt.",
+    "github": "",
+    "url": "https://www.rockvilleproducciones.com.ar/"
+  },
+  {
+    "id": 3,
+    "title": "Inmobiliaria Carlos Naum",
+    "video": "inmobiliaria.webm",
+    "description": "Diseño y desarrollo de sitio web para inmobiliaria Carlos Naum (Jesús María). <br> - Sitio desarrollado con Wordpress y Elementor. <br> - Contiene varias secciones: home, propiedades (en venta, en alquiler), nosotros, servicios y contacto. <br> - Tiene un panel personalizado para agregar, editar y eliminar propiedades. <br> - Advanced custom fields. <br> - Diseño responsive. <br> - Formularios de contacto y boton flotante para Whatsapp. <br> - Se registró el dominio y contrató el servicio de hosting. <br> - Certificado SSL let's encrypt.",
+    "github": "",
+    "url": "https://www.carlosnauminmobiliaria.com.ar/"
+  },
+  {
+    "id": 4,
+    "title": "Generador de hashtag",
+    "video": "tags-generator.webm",
+    "description": "Proyecto personal, generador de hashtag (etiquetas) dinámico. <br> - Consta de un input donde el usuario ingresa un texto y al presionar la tecla Enter se genera un elemento (span) con un # adelante. <br> - Cada span incluye un botón para eliminar el hashtag creado. <br> - Contiene algunas validaciones con una expresion regular: solo letras (incluida la ñ) y números. <br> - Contador de caracteres restantes con límite de cantidad. <br> - Diseño responsive mobile first. <br> Lenguajes utilizados: HTML5, CSS3, Javascript Vanilla.",
+    "github": "https://github.com/royarrascaeta/tags-generator",
+    "url": "https://royarrascaeta.github.io/tags-generator"
+  }  
+]

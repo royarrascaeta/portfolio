@@ -1,0 +1,16 @@
+//Variables
+$font-principal: "Exo", sans-serif;
+$font-secundaria: "Montserrat Alternates", sans-serif;
+$color-principal: #ff00b8;
+$color-neutro: #fff5b4;
+$color-oscuro: #600045;
+$color-gradiente: linear-gradient(
+  90deg,
+  $color-principal 0%,
+  $color-oscuro 100%
+);
+$color-gradiente-inv: linear-gradient(
+  90deg,
+  $color-oscuro 0%,
+  $color-principal 100%
+);

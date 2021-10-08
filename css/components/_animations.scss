@@ -1,0 +1,57 @@
+@keyframes progressUp {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes gravityFly {
+  0% {
+    transform: translateX(-25%) scale(1) rotate(15deg);
+  }
+
+  100% {
+    transform: translateX(25%) scale(1.2) rotate(-15deg);
+  }
+}
+
+@keyframes gravityFlySlow {
+  0% {
+    transform: translateX(-5%) scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(5%) scale(1.5) rotate(180deg);
+  }
+
+  100% {
+    transform: translateX(-5%) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes neonEffect {
+  0% {
+    text-shadow: 0 0 4rem $color-principal;
+  }
+
+  50% {
+    text-shadow: 0 0 2.5rem $color-principal;
+  }
+
+  100% {
+    text-shadow: 0 0 4rem $color-principal;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(5%);
+  }
+}

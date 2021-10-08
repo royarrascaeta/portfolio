@@ -1,0 +1,128 @@
+.portfolio {
+  &_view {
+    grid-column: span 4;
+    position: relative;
+    margin-bottom: 1.6rem;
+
+    @include media-up(md) {
+      margin: 0;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      clip-path: polygon(
+        0% 13%,
+        8% 0%,
+        100% 0%,
+        100% 21%,
+        96.4% 24%,
+        96.4% 74.5%,
+        100% 79%,
+        100% 100%,
+        0% 100%,
+        0% 79%,
+        3.5% 74.5%,
+        3.5% 24%,
+        0% 21%
+      );
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      min-height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .arrow-left,
+    .arrow-right {
+      position: absolute;
+      top: 50%;
+      color: transparent;
+      font-size: 1.8rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: color ease-in 0.3s;
+
+      @include media-up(md) {
+        font-size: 3rem;
+      }
+
+      i {
+        -webkit-text-stroke: 0.2rem $color-principal;
+        pointer-events: none;
+      }
+
+      &:hover {
+        color: $color-principal;
+        transition: color ease-in 0.3s;
+      }
+    }
+
+    .arrow-left {
+      left: -0.5rem;
+
+      @include media-up(md) {
+        left: 0;
+      }
+    }
+
+    .arrow-right {
+      right: -0.5rem;
+
+      @include media-up(md) {
+        right: 0;
+      }
+    }
+  }
+
+  &_details {
+    grid-column: span 3;
+    text-align: left;
+
+    .description {
+      max-height: 28rem;
+      padding-right: 0.8rem;
+      overflow-y: auto;
+      text-align: justify;
+      margin-bottom: 1.6rem;
+      display: flex;
+
+      @include media-up(md) {
+        max-height: 23rem;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0.8rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $color-principal;
+        border-radius: 4px;
+        @include box-shadow;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        border: 0.2rem solid $color-principal;
+        border-radius: 0.4rem;
+      }
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.6rem;
+    }
+  }
+}

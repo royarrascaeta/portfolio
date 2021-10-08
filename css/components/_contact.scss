@@ -1,0 +1,145 @@
+.contact {
+  position: relative;
+  padding-bottom: 4rem;
+
+  h2 {
+    z-index: 1;
+
+    @include media-up(md) {
+      z-index: unset;
+    }
+  }
+
+  &_img {
+    grid-column: span 3;
+
+    img {
+      width: 25rem;
+      height: auto;
+
+      animation: gravityFlySlow 240s linear normal infinite;
+
+      @include media-up(md) {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &_form {
+    grid-column: span 4;
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      gap: 2.4rem 3.2rem;
+
+      @include media-up(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      div {
+        width: 100%;
+        position: relative;
+
+        &:nth-child(5) {
+          @include media-up(md) {
+            grid-column: span 2;
+          }
+        }
+
+        label {
+          position: absolute;
+          top: 0;
+          left: 0.8rem;
+          font-size: 1.2rem;
+          color: $color-principal;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          height: 4.8rem;
+          background: transparent;
+          border: 0.2rem solid $color-principal;
+          padding: 0.8rem;
+          padding-top: 1.6rem;
+          vertical-align: middle;
+          position: relative;
+          color: $color-neutro;
+          font-size: 1.6rem;
+
+          &::placeholder {
+            font-size: 1.6rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0.8rem;
+            color: $color-principal;
+          }
+
+          &:focus-visible,
+          &:focus {
+            outline: none;
+            @include box-shadow;
+          }
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus {
+            -webkit-text-fill-color: $color-principal;
+            -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+          }
+        }
+
+        textarea {
+          height: 20rem;
+          resize: none;
+
+          @include media-up(md) {
+            grid-column: span 2;
+          }
+
+          &::placeholder {
+            top: 0.8rem;
+            transform: translateY(0%);
+          }
+
+          &::-webkit-scrollbar {
+            width: 0.8rem;
+            cursor: default;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: $color-principal;
+            border-radius: 4px;
+            @include box-shadow;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: transparent;
+            border: 0.2rem solid $color-principal;
+            border-radius: 0.4rem;
+          }
+        }
+      }
+    }
+
+    button {
+      margin-bottom: 8rem;
+
+      @include media-up(md) {
+        margin: 0;
+        grid-column: 2/3;
+      }
+    }
+  }
+
+  .btn-scroll-container {
+    visibility: visible !important;
+  }
+}
