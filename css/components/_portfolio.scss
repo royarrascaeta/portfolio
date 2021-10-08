@@ -123,6 +123,10 @@
         max-height: 23rem;
       }
 
+      @include media-up(xl) {
+        max-height: 28rem;
+      }
+
       &::-webkit-scrollbar {
         width: 0.8rem;
       }

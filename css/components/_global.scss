@@ -76,7 +76,8 @@ body {
       align-content: center;
     }
 
-    @include media-up(lg) {
+    @include media-up(xl) {
+      max-width: 1300px;
       gap: 0rem 6.4rem;
     }
 

@@ -553,8 +553,9 @@ body section {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1444px) {
   body section {
+    max-width: 1300px;
     gap: 0rem 6.4rem;
   }
 }
@@ -1375,6 +1376,12 @@ p {
 @media screen and (min-width: 768px) {
   .portfolio_details .description {
     max-height: 23rem;
+  }
+}
+
+@media screen and (min-width: 1444px) {
+  .portfolio_details .description {
+    max-height: 28rem;
   }
 }
 

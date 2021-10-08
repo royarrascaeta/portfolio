@@ -26,12 +26,14 @@ function scrollSpy(){
       let offsetHeight = section.offsetHeight;
       let id = section.id;
 
+      //Mostrar u ocultar header
       if(top >= ($hero.offsetTop - 100) + $hero.offsetHeight && mediaqueryList.matches ){
         $header.classList.add("slideDown");
       }else{
         $header.classList.remove("slideDown");
       }
 
+      //Cambiar menú activo
       if(top >= offsetTop - 100 && top < offsetTop - 100 + offsetHeight){
         $navLinks.forEach(link => {
           let active = document.querySelector("header nav a[href*='#" + id +"']");
@@ -39,6 +41,7 @@ function scrollSpy(){
           if(active) active.querySelector(".border").classList.add("nav-hover");
         })
 
+        //Cargar barras en about
         if(id === "about"){
           $about.querySelectorAll(".value").forEach(value => {
             value.classList.add("progress");
@@ -46,6 +49,7 @@ function scrollSpy(){
         }
       }
 
+      //Cargar contenido de cada sección
       if(top >= offsetTop - 250 && top < offsetTop - 250 + offsetHeight){
         section.classList.add("fadeIn");
         section.classList.remove("hidden");
@@ -59,7 +63,7 @@ function scrollSpy(){
 document.addEventListener("DOMContentLoaded",(e)=>{
   scrollSpy();
   typeWriter($ocupation.dataset.text, $ocupation);
-  navHover($navLinks, scrollSpy);
+  navHover($navLinks);
   form($form);
   dinamicPortfolio();
 
