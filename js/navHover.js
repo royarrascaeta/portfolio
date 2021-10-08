@@ -7,7 +7,6 @@ export default function navHover(links){
 
   links.forEach(link => {
     link.addEventListener("mouseover", (e) => {
-      console.log(active.parentNode)
       if(e.target !== active.parentNode){
         active.classList.remove("nav-hover");
         e.target.querySelector(".border").classList.add("nav-hover");
