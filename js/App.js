@@ -16,7 +16,7 @@ const $sections = document.querySelectorAll("section");
 
 function scrollSpy(){
   //Scrollspy nuevo
-  let mediaqueryList = window.matchMedia("(min-width: 540px)");
+  let mediaqueryList = window.matchMedia("(min-width: 768px)");
 
   window.addEventListener("scroll",(e)=>{
 
