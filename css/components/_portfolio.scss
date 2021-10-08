@@ -9,6 +9,28 @@
     }
 
     video {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      clip-path: polygon(
+        0% 13%,
+        8% 0%,
+        100% 0%,
+        100% 21%,
+        96.4% 24%,
+        96.4% 74.5%,
+        100% 79%,
+        100% 100%,
+        0% 100%,
+        0% 79%,
+        3.5% 74.5%,
+        3.5% 24%,
+        0% 21%
+      );
+    }
+
+    .bg-video {
       width: 100%;
       height: auto;
       clip-path: polygon(
@@ -54,7 +76,7 @@
       transition: color ease-in 0.3s;
 
       @include media-up(md) {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
 
       i {

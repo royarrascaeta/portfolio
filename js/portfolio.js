@@ -53,7 +53,7 @@ export default function dinamicPortfolio(){
       $details.classList.add("hidden")
       setTimeout(() => {
         showProject(id);
-      }, 250);
+      }, 500);
     }
     
     if(e.target === $arrowLeft && id > 1){
@@ -62,7 +62,7 @@ export default function dinamicPortfolio(){
       $details.classList.add("hidden")
       setTimeout(() => {
         showProject(id);
-      }, 250);
+      }, 500);
     }
 
     //Visibilidad de flechas

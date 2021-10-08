@@ -1273,6 +1273,15 @@ p {
 }
 
 .portfolio_view video {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  -webkit-clip-path: polygon(0% 13%, 8% 0%, 100% 0%, 100% 21%, 96.4% 24%, 96.4% 74.5%, 100% 79%, 100% 100%, 0% 100%, 0% 79%, 3.5% 74.5%, 3.5% 24%, 0% 21%);
+          clip-path: polygon(0% 13%, 8% 0%, 100% 0%, 100% 21%, 96.4% 24%, 96.4% 74.5%, 100% 79%, 100% 100%, 0% 100%, 0% 79%, 3.5% 74.5%, 3.5% 24%, 0% 21%);
+}
+
+.portfolio_view .bg-video {
   width: 100%;
   height: auto;
   -webkit-clip-path: polygon(0% 13%, 8% 0%, 100% 0%, 100% 21%, 96.4% 24%, 96.4% 74.5%, 100% 79%, 100% 100%, 0% 100%, 0% 79%, 3.5% 74.5%, 3.5% 24%, 0% 21%);
@@ -1310,7 +1319,7 @@ p {
 @media screen and (min-width: 768px) {
   .portfolio_view .arrow-left,
   .portfolio_view .arrow-right {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
